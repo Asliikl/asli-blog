@@ -6,24 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        form {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        .container {
+            text-align: center;
         }
 
-        label {
-        margin-bottom: 5px;
+        .container form {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: rgb(107, 132, 232);
         }
-        .form{
-        display: flex;
-        flex-direction: column;
-        align-items:center;
+
+        .container form label, .container form input, .container form button {
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+        .container form button {
+            margin: 0 auto;
+            background-color:black;
+            color: white;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <div class="form">
+    <div class="container">
         <form action="{{route('admin.login.post')}}" method="POST">
              @csrf
             <label>Email Adress: </label><input type="email" name="email">

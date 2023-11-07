@@ -1,2 +1,6 @@
-Hoşgeldin, {{ session()->get('admin')->username }}
 
+@extends('admin.layouts.master')
+
+@push('page_title')
+Home
+@endpush
